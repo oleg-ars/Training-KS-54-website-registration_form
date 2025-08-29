@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+ 
+body {
+ margin: 0;
+ padding: 0;
+ font-family: Roboto, sans-serif;
+ background: #000000
+}
+.miy-wrapper {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+.miy-wrapper {
+ display: flex;
+ height: 100vh;
+ justify-content: center;
+ align-items: center;
+}
+.miy-form {
+ background: #ffffff; 
+ padding: 20px; 
+ width: 410px;
+}
+.miy-form a {
+ text-decoration: none;
+ transition: 0.5s;
+ color: #298cad;
+}
+.miy-form a:hover {
+ color: #36d2ff;
+}
+
+.miy-form ul {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+}
+.miy-form input {
+ display: block;
+ width: 100%;
+}
+.del {
+ display: none;
+}
+.miy-form {
+ background: rgba(255, 255, 255, 0.2);
+}
+.tab-form {
+ background: #fff;
+ padding: 30px 20px 20px;
+ display: none;
+}
+.tab {
+ outline: 1px solid orange;
+ color: #FFAA00;
+ font-weight: 600;
+ padding: 25px;
+ display: inline-block;
+}
+.tab.active {
+ background: #fff;
+ color: #1b5f75;
+}
+ 
+.tab {
+ border-radius: 3px 3px 0 0;
+ margin-bottom: -1px;
+ cursor: pointer;
+}
+
+.tab-reg{
+  outline: 1px solid orange;
+ color: #FFAA00;
+ font-weight: 600;
+ padding: 25px;
+ display: inline-block;
+}
+
+.tab-reg.active {
+  background: #fff;
+  color: #1b5f75;
+}
+
+.tab-reg {
+  border-radius: 3px 3px 0 0;
+ margin-bottom: -1px;
+ cursor: pointer;
+}
+
+html {
+  background-image: url(background.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.input{
+ font-size: 16px;
+ border: 2px solid #e9eaea;
+ padding: 12px 14px;
+ box-sizing: border-box;
+ margin-bottom: 22px;
+ color: #1e8da6;
+ outline: none;
+}
+
+a.button {
+  background: #298cad;
+  color: #ffffff;
+  font-size: 18px;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  line-height: 46px;
+  margin-top: 30px;
+}
+
+.social a {
+  margin-top: 10px;
+  display: block;
+  font-size: 12px;
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  margin: 0 auto; 
+  text-align: center;
+  width: 50px;
+  height: 30px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.forgot {
+  text-align: center;
+}
+
+.box-form-tab {
+  position: relative;
+  
+}
+ 
+.box-form-tab input {
+  border:none;
+  border-bottom: 2px solid #e9eaea;
+  padding: 10px 0;
+}
+
+.box-form-tab label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 10px;
+  color: #c4c9c9;
+  transition: 1s;
+  pointer-events: none;
+}
+
+.box-form-tab input:focus ~ label {
+  outline: 1px solid orange;
+  top: -30px;
+}
+
+.box-form-tab input:focus ~ label,
+.box-form-tab input:valid ~ label {
+  top: -20px;
+  font-size: 12px;
+  color: #33d3fe;
+}
+
+.miy-form-tabs {
+  display: flex;
+  align-items: center; 
+}
+
+.miy-form-tabs a {
+  text-decoration: none;
+  color: #333;
+  margin-right: 10px;
+}
+.tab::before{
+  content: "\f002";
+  font-family: FontAwesome;
+  margin-right: 5px;
+}
+
+.tab-reg::before{
+  content: "\f007";
+  font-family: FontAwesome; 
+  margin-right: 5px;
+}
+
+.recover {
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+label[for="ckbox"] {
+  cursor: pointer;
+  padding-left: 35px;
+  width: 250px;
+  display: block;
+  position: relative;
+}
+
+#ckbox + label::before {
+  content: "";
+  position: absolute;
+  border: 2px solid #c4c9c9;
+  width: 18px;
+  height: 18px;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+
+#ckbox:checked + label::before {
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid #408cc2;
+  border-bottom: 2px solid #408cc2;
+  transform: rotate(40deg);
+  width: 12px;
+  height: 22px;
+  transform-origin: 100% 100%;
+  top: -4px;
+  left: -5px;
+}
+
+#ckbox:not(:checked),
+#ckbox:checked {
+  display: none;
+}
+
+ /* Стили для всплывающего окна (скрыто по умолчанию) */
+ .popup {
+  position: fixed; /* Фиксированное позиционирование, чтобы окно не скролилось */
+  top: 50%; /* Центрирование по вертикали */
+  left: 50%; /* Центрирование по горизонтали */
+  transform: translate(-50%, -50%); /* Точное центрирование */
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Убедитесь, что окно поверх всего контента */
+  display: none; /* Скрыто по умолчанию */
+  text-align: center;
+}
+
+/* Стили для кнопки закрытия всплывающего окна */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Затемняющий фон */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999; /* Размещаем фон под всплывающим окном */
+  display: none; /* Скрыт по умолчанию */
+}

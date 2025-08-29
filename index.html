@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма для авторизации</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Стили.css" type="text/css">
+    <script src="Скрипт.js"></script>
+</head>
+<body>
+<div class="miy-wrapper">
+    <div class="miy-form">
+        <div class="miy-form-tabs">
+            <label class="tab" id="authTab">Авторизация</label>
+            <label class="tab-reg" id="regTab">Регистрация</label>
+        </div>
+
+        <form class="tab-form active" id="authForm">
+            <div class="box-form-tab">
+                <input class="input" type="email" id="authEmail" required>
+                <label>Введите E-mail</label>
+            </div>
+
+            <div class="box-form-tab">
+                <input class="input" type="password" id="authPassword" required>
+                <label>Введите пароль</label>
+            </div>
+
+            <a href="#" class="button" id="loginBtn">Войти</a>
+            <div class="logo"><a href="#"><i class="fa fa-facebook"></i></a></div>
+            <div class="logo"><a href="#"><i class="fa fa-twitter"></i></a></div>
+            <div class="logo"><a href="#"><i class="fa fa-instagram"></i></a></div>
+            <div class="logo"><a href="#"><i class="fa fa-vk"></i></a></div>
+            <div class="logo"><a href="#"><i class="fa fa-youtube"></i></a></div>
+            <div class="forgot"><a href="#">Забыл пароль</a></div>
+        </form>
+
+        <form class="tab-form" id="regForm">
+            <div class="box-form-tab">
+                <input class="input" type="email" id="regEmail" required>
+                <label>Введите E-mail адрес</label>
+            </div>
+
+            <div class="box-form-tab">
+                <input class="input" type="text" id="regName" required>
+                <label>Введите свое имя</label>
+            </div>
+
+            <div class="box-form-tab">
+                <input class="input" type="password" id="regPassword" required>
+                <label>Введите пароль</label>
+            </div>
+
+            <a href="#" class="button" id="registerBtn">Регистрация</a>
+            <div class="recover">
+                <input type="checkbox" id="ckbox">
+                <label for="ckbox">Ознакомлен(-а) и принимаю <a href="#">условия регистрации</a></label>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
